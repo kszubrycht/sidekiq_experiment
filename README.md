@@ -10,10 +10,17 @@ bundle exec ruby ./init_db.rb
 Start Sidekiq process:
 
 ```
-sidekiq -r ./worker.rb
+bundle exec sidekiq -r ./worker.rb
 ```
 
 Run script:
+
 ```
 bundle exec ruby ./script.rb
+```
+
+Open console:
+
+```
+bundle exec ruby ./console.rb
 ```

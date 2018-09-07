@@ -3,6 +3,7 @@ require './account'
 
 class Worker
   include Sidekiq::Worker
+  sidekiq_options retry: 5
 
   def perform(id)
     ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'db.sqlite')
